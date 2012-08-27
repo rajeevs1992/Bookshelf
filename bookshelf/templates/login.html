@@ -1,0 +1,71 @@
+<html>
+	<style type=text/css>
+		body
+		{
+			background-color:#96363D;
+			font-family:ubuntu;
+			color:#BBA5D2;
+		}
+		h1
+		{
+			color:#dfe123;
+		}
+		div.login
+		{
+			right:50px;
+			top:150px;
+			font-size:20px;
+			position:absolute;
+			border:3px black solid;
+			width:300px;
+			height:300px;
+			color:#ADA08F;
+			padding-left:10px;
+		}
+		hr
+		{
+			height:3px;
+			background-color:#750007;
+		}
+		input.loginField
+		{
+			left:110px;
+			background-color:pink;
+			position:absolute;
+		}
+		input.button
+		{
+			height:30px;
+			width:100px;
+			right:35px;
+			position:absolute;
+		}
+		div.error
+		{
+			color:red;
+			font-size:16px;
+		}
+
+	</style>
+	<body>
+	<title>Login</title>
+	<h1>Welcome To The Bookshelf</h1>
+	<h3>Department Of Computer Science And Engineering</h3>
+	<hr>
+	<div class=login>
+	<h3>Sign In</h3>
+	<form action=/login/ method=post>
+		{% csrf_token %}
+		Username<input class=loginField name=uname type=text><br><br>
+		Password<input class=loginField name=passwd type=password><br><br>
+		<div class=error>
+			{{ error }}<br>
+		</div>
+		<input type=submit Value=Login class=button><br><br>
+	</form>
+		<div style=font-size:12px;>
+			<a href=/login/forgot >Can't Access your account?</a>
+		</div>
+	</div>
+	</body>
+</html>

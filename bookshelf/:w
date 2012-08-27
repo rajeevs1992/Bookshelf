@@ -1,0 +1,24 @@
+body
+{
+	background-image:url('/static/img.jpg');
+	font-family:'ubuntu';
+	color:#781378;
+}
+input.vform
+{
+	left:200px;
+	position:absolute;
+	width:150px;
+}
+h1
+{
+	text-align:center;
+	color:#76001B;
+}
+
+div.logout
+{
+	right:10px;
+	top:20px;
+	position:absolute;
+}

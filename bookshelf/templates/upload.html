@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+	<title>Upload books</title>
+	<h1>Upload E books</h2>
+	<div class=logout>
+		<form method=get action=/logout>
+			<input type=submit value=Logout>
+		</form>
+	</div>
+	<h3>Select files to upload:</h3><br>
+	<form action=/upload/ enctype="multipart/form-data" method=post>
+	{% csrf_token %}
+		Title<input type=text name=title class=vform><br><br>
+		Author<input type=text name=author class=vform><br><br>
+		Select file 
+		<input type=file name=file><br><br>
+		<div class =error>
+		{{ error|safe }}
+		</div>
+		<input type=submit value=Upload>
+	</form>
+{% endblock %}

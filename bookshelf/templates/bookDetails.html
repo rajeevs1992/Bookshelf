@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+	<title>{{ book.title }}</title>
+	<h1>{{ book.title }}</h2>
+
+	<object data='/static/{{ book.bookKey }}.jpg' title='{{ book.title }}' class=preview align="middle">
+		<img src='/static/nopre.jpg' title='{{ book.title }}' class=preview align=middle>
+	</object>
+	<br>
+	<h4>Author : {{ book.author }}</h4>
+	<a href=/download/{{ book.bookKey }}/>
+		<input type=submit value=Download class=download>
+	</a>
+	<a href=/>
+		<input type=submit value='Back to Homepage' class=download>
+	</a>
+
+
+{% endblock %}

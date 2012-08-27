@@ -1,0 +1,85 @@
+body
+{
+	background-image:url('/static/img.jpg');
+	font-family:'ubuntu';
+	color:#781378;
+}
+div.footer
+{
+	bottom:5px;
+	position:absolute;
+	font-size:10px;
+}
+td
+{
+	text-align:center;
+	width:125px;
+}
+form.search
+{
+	right:10px;
+	top:150px;
+	position:absolute;
+}
+div.gallery
+{
+	top:250px;
+	position:absolute;
+}
+img.thumbnail
+{
+	height:150px;
+	width:125px;
+	border:black solid 3px;
+	display:inline;
+}
+object.thumbnail
+{
+	height:150px;
+	width:125px;
+	display:inline;
+}
+img.preview
+{
+	height:300px;
+	width:250px;
+	left:500px;
+	position:relative;
+	border:black solid 3px;
+	display:inline;
+}
+object.preview
+{
+	height:300px;
+	width:250px;
+	left:500px;
+	position:relative;
+	display:inline;
+}
+div.error
+{
+	color:red;
+}
+input.vform
+{
+	left:200px;
+	position:absolute;
+	width:150px;
+}
+h1
+{
+	text-align:center;
+	color:#76001B;
+}
+input.download
+{
+	width:150px;
+	height:50px;
+}
+		
+div.logout
+{
+	right:10px;
+	top:20px;
+	position:absolute;
+}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+		<h1>Search results</h1>
+		<form class=search action=/search/ method=get>
+		Enter author name or Book title:
+			<input type=text name=key>
+			<input type=Submit value=Search>
+		</form>
+		<div class=gallery>
+		{% if books %}
+			{% for i in books %}
+				<a href='/details/{{ i.bookKey }}'>
+					<h3>{{ i.title }}</h3>
+				</a>
+				<hr>
+			{% endfor %}
+		{% else %}
+			<div class=error>No results</div>
+		{% endif %}
+		</div>
+		<a href='/'>Back to homepage</a>
+{% endblock %}

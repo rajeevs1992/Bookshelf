@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+		<h1>Welcome to the Bookshelf</h1>
+		<h3>The Govt Engineering College,Thrissur</h3>
+		<h4>Department Of Computer Science And Engineering</h4>
+		<title>{{ title }}</title>
+		The bookshelf is a digital library,that allows students to search and download Ebooks.
+		<form class=search action=/search/ method=get>
+		Enter author name or Book title:
+			<input type=text name=key>
+			<input type=Submit value=Search>
+		</form>
+		<hr>
+
+		<h3>Here are the latest books....</h3>
+		<div class=gallery>
+		<table>
+			<tr>
+			{% for i in books %}
+				<td><a href='/details/{{ i.bookKey }}'>
+					<object data='/static/{{ i.bookKey }}.jpg' title='{{ i.title }}' class=thumbnail>
+						<img src='/static/nopre.jpg' title='{{ i.title }}' class=thumbnail>
+					</object>
+				</a></td>
+			{% endfor %}
+			</tr>
+			<tr>
+			{% for i in books %}
+				<td>{{i.title}}</td>
+			{% endfor %}
+			</tr>
+			<tr>
+			{% for i in books %}
+				<td>{{i.author}}</td>
+			{% endfor %}
+			</tr>
+		</table>
+		</div>
+{% endblock %}
